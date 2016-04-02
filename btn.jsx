@@ -19,9 +19,9 @@ export default class ModalBtn extends React.Component {
     if (this.props.Forms)
       Modal = ModalFlow
     return <span>
-      <a onClick={this.on.open} className={this.props.className} href="javascript:void(0)">
+      <span onClick={this.on.open}>
         {this.props.children}
-      </a>
+      </span>
       <Modal {...this.props} isOpen={this.state.isOpen} onClose={this.on.close} />
     </span>
   }

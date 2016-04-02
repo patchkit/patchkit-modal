@@ -28,6 +28,14 @@ class ModalContent2 extends React.Component {
 <ModalBtn Forms={[ModalContent1, ModalContent2]} className="fullheight" onClose={onClose}>Click to open</ModalBtn>
 ```
 
+The `<Btn>` wraps its children in a clickable region, but adds no visual elements, so you can put custom elements inside to control its appearance:
+
+```jsx
+<ModalBtn Form={ModalContent1} className="fullheight" onClose={onClose}>
+  <a className="btn highlighted">Click to open</a>
+</ModalBtn>
+```
+
 However, you can use the modals directly, if you want to show/hide the modal using different logic.
 
 ```jsx
@@ -80,6 +88,12 @@ class ModalForm extends React.Component {
 
 <Btn Form={ModalForm} className="center-block" onClose={onClose}>Click to open</Btn>
 ```
+
+Other properties:
+
+ - On `<Single>`, you can set `nextLabel` and `cancelLabel` to control the button text at the bottom of the modal.
+ - On all components, you can set `formProps` to an object of properties to pass to the Form/s on render.
+ - On `<Flow>`, you can set `labels` to an array of text labels to be put on the stepped progress-bar.
 
 ## Styles
 
