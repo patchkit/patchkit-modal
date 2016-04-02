@@ -84,27 +84,27 @@ export default class ModalDemo extends React.Component {
       <h1>patchkit-modal</h1>
       <section className="modal-btn-single-fullheight-static">
         <header>&lt;Btn Form=StaticModal className="fullheight"&gt; (static content)</header>
-        <div className="content"><Btn Form={StaticModal} className="fullheight" onClose={onClose}><a btnClassName="btn highlighted">Click to open</a></Btn></div>
+        <div className="content"><Btn Form={StaticModal} className="fullheight" onClose={onClose}><a className="btn highlighted">Click to open</a></Btn></div>
       </section>
       <section className="modal-btn-single-center-block-static">
         <header>&lt;Btn Form=StaticModal className="center-block"&gt; (static content)</header>
-        <div className="content"><Btn Form={StaticModal} className="center-block" onClose={onClose}><a btnClassName="btn highlighted">Click to open</a></Btn></div>
+        <div className="content"><Btn Form={StaticModal} className="center-block" onClose={onClose}><a className="btn highlighted">Click to open</a></Btn></div>
       </section>
       <section className="modal-btn-single-fullheight-form">
         <header>&lt;Btn Form=ModalForm className="fullheight"&gt; (with form)</header>
-        <div className="content"><Btn Form={ModalForm} className="fullheight" onClose={onClose}><a btnClassName="btn highlighted">Click to open</a></Btn></div>
+        <div className="content"><Btn Form={ModalForm} className="fullheight" onClose={onClose}><a className="btn highlighted">Click to open</a></Btn></div>
       </section>
       <section className="modal-btn-single-center-block-form">
         <header>&lt;Btn Form=ModalForm className="center-block"&gt; (with form)</header>
-        <div className="content"><Btn Form={ModalForm} className="center-block" onClose={onClose}><a btnClassName="btn highlighted">Click to open</a></Btn></div>
+        <div className="content"><Btn Form={ModalForm} className="center-block" onClose={onClose}><a className="btn highlighted">Click to open</a></Btn></div>
       </section>
       <section className="modal-btn-flow-fullheight-static">
         <header>&lt;Btn Forms=[StaticModal1,StaticModal2,StaticModal3] labels=["First","Second","Third"] className="fullheight"&gt; (static content)</header>
-        <div className="content"><Btn Forms={[StaticModal1,StaticModal2,StaticModal3]} labels={["First","Second","Third"]} className="fullheight" onClose={onClose}><a btnClassName="btn highlighted">Click to open</a></Btn></div>
+        <div className="content"><Btn Forms={[StaticModal1,StaticModal2,StaticModal3]} labels={["First","Second","Third"]} className="fullheight" onClose={onClose}><a className="btn highlighted">Click to open</a></Btn></div>
       </section>
       <section className="modal-btn-flow-center-block-static">
         <header>&lt;Btn Forms=[StaticModal1,StaticModal2,StaticModal3] labels=["First","Second","Third"] className="center-block"&gt; (static content)</header>
-        <div className="content"><Btn Forms={[StaticModal1,StaticModal2,StaticModal3]} labels={["First","Second","Third"]} className="center-block" onClose={onClose}><a btnClassName="btn highlighted">Click to open</a></Btn></div>
+        <div className="content"><Btn Forms={[StaticModal1,StaticModal2,StaticModal3]} labels={["First","Second","Third"]} className="center-block" onClose={onClose}><a className="btn highlighted">Click to open</a></Btn></div>
       </section>
     </div>
   }
