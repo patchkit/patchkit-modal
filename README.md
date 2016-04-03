@@ -92,8 +92,9 @@ class ModalForm extends React.Component {
 Other properties:
 
  - On `<Single>`, you can set `nextLabel` and `cancelLabel` to control the button text at the bottom of the modal.
- - On all components, you can set `formProps` to an object of properties to pass to the Form/s on render.
  - On `<Flow>`, you can set `labels` to an array of text labels to be put on the stepped progress-bar.
+ - On single modals (or a `<Btn>` to one), you can set `formProps` to an object of properties to pass to the Form on render.
+ - On flow modals (or a `<Btn>` to one), you can set `formsProps` to an object of properties to pass to the Forms on render.
 
 ## Styles
 

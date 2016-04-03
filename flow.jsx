@@ -46,6 +46,12 @@ export default class ModalFlow extends React.Component {
     return this.props.Forms[this.state.step]
   }
 
+  getStepProps() {
+    if (this.state.step === false)
+      return false
+    return this.props.formsProps[this.state.step]
+  }
+
   onNextClick() {
     const step = this.refs.step
     const next = (step && step.submit.bind(step)) || this.gotoNextStep.bind(this)
@@ -59,6 +65,7 @@ export default class ModalFlow extends React.Component {
 
   render() {
     var StepCom = this.getStepCom()
+    var stepProps = this.getStepProps()
     if (!this.props.isOpen || !StepCom)
       return <span/>
 
@@ -77,7 +84,7 @@ export default class ModalFlow extends React.Component {
     return <div className={'modal modal-flow '+(this.props.className||'')}>
       <div className="modal-inner">
         <div className="modal-content">
-          <StepCom ref="step" setIsHighlighted={setIsHighlighted} setIsValid={setIsValid} setHelpText={setHelpText} gotoNextStep={this.gotoNextStep.bind(this)} />
+          <StepCom ref="step" setIsHighlighted={setIsHighlighted} setIsValid={setIsValid} setHelpText={setHelpText} gotoNextStep={this.gotoNextStep.bind(this)} {...stepProps} />
         </div>
         { this.state.helpText ? <div className="modal-helptext">{this.state.helpText}</div> : '' }
         <div className="modal-ctrls">
