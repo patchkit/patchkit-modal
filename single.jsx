@@ -5,7 +5,7 @@ export default class ModalSingle extends React.Component {
     Form: React.PropTypes.func.isRequired
   }
   static contextTypes = {
-    events: React.PropTypes.obj.isRequired
+    events: React.PropTypes.object.isRequired
   }
 
   constructor(props) {
