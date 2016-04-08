@@ -4,7 +4,7 @@ import SteppedProgressBar from 'patchkit-stepped-progress-bar'
 
 export default class ModalFlow extends React.Component {
   static contextTypes = {
-    emit: React.PropTypes.func
+    events: React.PropTypes.object
   }
 
   constructor(props) {
@@ -57,7 +57,7 @@ export default class ModalFlow extends React.Component {
     const next = (step && step.submit.bind(step)) || this.gotoNextStep.bind(this)
     next(err => {
       if (err)
-        this.context.emit('error', err)
+        this.context.events.emit('error', err)
       else
         this.gotoNextStep()
     })

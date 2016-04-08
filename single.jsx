@@ -5,7 +5,7 @@ export default class ModalSingle extends React.Component {
     Form: React.PropTypes.func.isRequired
   }
   static contextTypes = {
-    emit: React.PropTypes.func.isRequired
+    events: React.PropTypes.obj.isRequired
   }
 
   constructor(props) {
@@ -28,7 +28,7 @@ export default class ModalSingle extends React.Component {
 
     const done = err => {
       if (err)
-        this.context.emit('error', err)
+        this.context.events.emit('error', err)
       this.props.onClose && this.props.onClose(err, true)
     }
 
