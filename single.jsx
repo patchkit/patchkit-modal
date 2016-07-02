@@ -1,4 +1,5 @@
 import React from 'react'
+import t from 'patchwork-translations'
 
 export default class ModalSingle extends React.Component {
   static propTypes = {
@@ -39,8 +40,8 @@ export default class ModalSingle extends React.Component {
   }
 
   render() {
-    const nextLabel = this.props.nextLabel || 'Finish'
-    const cancelLabel = this.props.cancelLabel || 'Cancel'
+    const nextLabel = this.props.nextLabel || t('Finish')
+    const cancelLabel = this.props.cancelLabel || t('Cancel')
     var Form = this.props.Form
     if (!this.props.isOpen || !Form)
       return <span/>

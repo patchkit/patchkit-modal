@@ -21,6 +21,7 @@
   "homepage": "https://github.com/patchkit/patchkit-modal#readme",
   "dependencies": {
     "patchkit-stepped-progress-bar": "^1.0.4",
+    "patchwork-translations": "^1.0.0",
     "react": "^0.14.6"
   },
   "devDependencies": {

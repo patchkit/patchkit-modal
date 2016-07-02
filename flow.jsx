@@ -1,6 +1,7 @@
 'use babel'
 import React from 'react'
 import SteppedProgressBar from 'patchkit-stepped-progress-bar'
+import t from 'patchwork-translations'
 
 export default class ModalFlow extends React.Component {
   static contextTypes = {
@@ -69,7 +70,7 @@ export default class ModalFlow extends React.Component {
     if (!this.props.isOpen || !StepCom)
       return <span/>
 
-    const nextText = (this.state.step >= (this.props.Forms.length - 1)) ? 'Finish' : 'Next'
+    const nextText = (this.state.step >= (this.props.Forms.length - 1)) ? t('Finish') : t('Next')
     
     var nextCls = ['btn']
     if (!this.state.isValid)
